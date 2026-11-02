@@ -15,7 +15,7 @@ import './HomePage.css'
 const HomePage = () => (
   <Layout>
     <div className="home__gallery">
-      <Gallery images={homeSlides} width="1440" height="681" />
+      <Gallery images={homeSlides} width="1440" height="681" autoPlay={4000} />
     </div>
 
     <div className="container home__content">
