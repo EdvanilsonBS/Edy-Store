@@ -1,0 +1,41 @@
+/*
+   Estilo do <Section />. Título: 24px na cor dark-gray-2. Link à direita: 18px na cor primary.
+*/
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.section__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.section__header--center {
+  justify-content: center;
+}
+
+.section__header--center .section__link {
+  position: absolute;
+  right: 0;
+}
+
+.section__link {
+  font-size: 18px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.section__link:hover {
+  text-decoration: underline;
+}

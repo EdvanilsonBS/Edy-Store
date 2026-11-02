@@ -1,0 +1,75 @@
+/*
+   Estilo da página de categorias: grade de 4 cards (2 no tablet, 1 no celular) com título sobre a imagem.
+*/
+
+.categories {
+  padding-top: 48px;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 292 / 321;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--dark-gray);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 60%);
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card__name,
+.category-card__count {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+}
+
+.category-card__name {
+  bottom: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.category-card__count {
+  bottom: 18px;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .categories__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

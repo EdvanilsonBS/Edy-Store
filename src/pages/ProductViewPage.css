@@ -1,0 +1,53 @@
+/*
+   Estilo da página do produto.
+   - .product-view__main: galeria (até 700px) ao lado do BuyBox; em telas até 1000px ficam um embaixo do outro.
+*/
+
+.product-view {
+  padding-top: 48px;
+}
+
+.product-view__main {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.product-view__gallery {
+  flex: 0 1 700px;
+  min-width: 0;
+}
+
+.product-view__main > :last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-view__label {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.product-view__missing {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  text-align: center;
+}
+
+.product-view__missing a {
+  color: var(--primary);
+}
+
+@media (max-width: 1000px) {
+  .product-view__main {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .product-view__gallery {
+    flex: none;
+  }
+}

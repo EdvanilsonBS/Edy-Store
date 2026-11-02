@@ -1,0 +1,94 @@
+/*
+   Estilo da página de listagem.
+   - Barra lateral (.listing__sidebar) com 308px de largura, conforme a documentação.
+   - Em telas até 900px, a barra lateral passa para cima da lista.
+*/
+
+.listing {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 48px;
+}
+
+.listing__sidebar {
+  width: 308px;
+  flex-shrink: 0;
+}
+
+.listing__results {
+  flex: 1;
+  min-width: 0;
+}
+
+.listing__sort label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--dark-gray-2);
+}
+
+.listing__sort select {
+  width: 308px;
+  max-width: 100%;
+  height: 60px;
+  padding: 0 16px;
+  border: 1px solid var(--dark-gray-2);
+  border-radius: 4px;
+  background: var(--white);
+  font-size: 16px;
+  color: var(--dark-gray-2);
+}
+
+.listing__filters {
+  width: 308px;
+  max-width: 100%;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--white);
+}
+
+.listing__filters h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.listing__filters hr {
+  margin: 16px 0 20px;
+  border: none;
+  border-top: 1px solid var(--light-gray-2);
+}
+
+.listing__clear,
+.listing__query button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.listing__query {
+  margin: -8px 0 24px;
+  font-size: 14px;
+  color: var(--dark-gray-3);
+}
+
+@media (max-width: 900px) {
+  .listing {
+    flex-direction: column;
+  }
+
+  .listing__sidebar {
+    width: 100%;
+  }
+
+  .listing__results {
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+/*
+   Estilo do <BuyBox /> (caixa de compra).
+   Nome 32px | referência 12px | estrelas em caixa amarela (warning) | preço 32px | botão COMPRAR amarelo.
+   Para mudar o tamanho do botão, altere width/height em .buy-box__cta.
+*/
+
+.buy-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buy-box__name {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.buy-box__reference {
+  margin: -8px 0 0;
+  font-size: 12px;
+  color: var(--dark-gray-3);
+}
+
+.buy-box__rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buy-box__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--warning);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.buy-box__rating-total {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
+.buy-box__prices {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.buy-box__price {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.buy-box__price--old {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--light-gray-2);
+  text-decoration: line-through;
+}
+
+.buy-box__description h2 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.buy-box__description p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--dark-gray-2);
+}
+
+.buy-box__error {
+  margin: 0;
+  font-size: 14px;
+  color: var(--error);
+}
+
+.buy-box__cta {
+  align-self: flex-start;
+  width: 220px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: var(--warning);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.buy-box__cta:hover {
+  filter: brightness(0.95);
+}

@@ -1,0 +1,45 @@
+/*
+   Estilo do <ProductOptions /> (tamanhos e cores).
+   - Quadrado: altura 46px, fonte 24px, borda de 1px cinza.
+   - Círculo: 31x31.
+   - Selecionado: borda de 2px na cor primary (1px de borda + 1px de sombra para não mexer no tamanho).
+*/
+
+.product-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-options__item {
+  padding: 0;
+  border: 1px solid var(--light-gray-2);
+  background: var(--white);
+  color: var(--dark-gray-2);
+  cursor: pointer;
+  transition: box-shadow 0.15s ease;
+}
+
+.product-options__item--square {
+  height: 46px;
+  min-width: 46px;
+  padding: 0 14px;
+  font-size: 24px;
+}
+
+.product-options__item--square.product-options__item--color {
+  width: 46px;
+  padding: 0;
+}
+
+.product-options__item--circle {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
+
+/* borda de 2px na cor primary: 1px de borda + 1px de sombra para não deslocar o layout */
+.product-options__item--selected {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}

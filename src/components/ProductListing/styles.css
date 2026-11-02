@@ -1,0 +1,46 @@
+/*
+   Estilo da grade de produtos.
+   - gap: 32px (linhas) 10px (colunas)
+   - Colunas: 4 no desktop (ou 3, via prop columns); as regras @media abaixo reduzem para
+     3, 2 e 1 coluna em telas menores. Mude os números dos max-width para ajustar os pontos de quebra.
+*/
+
+.product-listing {
+  display: grid;
+  gap: 32px 10px;
+  justify-items: center;
+}
+
+.product-listing--cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-listing--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-listing__empty {
+  margin: 0;
+  padding: 32px 0;
+  color: var(--dark-gray-3);
+}
+
+@media (max-width: 1100px) {
+  .product-listing--cols-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .product-listing--cols-4,
+  .product-listing--cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-listing--cols-4,
+  .product-listing--cols-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

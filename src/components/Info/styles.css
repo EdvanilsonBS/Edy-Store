@@ -1,0 +1,31 @@
+/*
+   Estilo das colunas de informações do rodapé (<Info />). Texto branco sobre o fundo escuro do rodapé.
+*/
+
+.info__title {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.info__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.info__list a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.info__list a:hover {
+  text-decoration: underline;
+}

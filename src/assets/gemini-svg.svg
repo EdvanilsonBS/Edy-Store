@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%">
+  <!-- Fundo Escuro -->
+  <rect width="600" height="200" fill="#121212" />
+
+  <!-- Grupo do Ícone (Terminal) -->
+  <g transform="translate(60, 45)">
+    <!-- Quadrado com cantos arredondados -->
+    <rect x="0" y="0" width="110" height="110" rx="22" ry="22" fill="#ffffff" />
+    
+    <!-- Símbolo do prompt ( >_ ) em código/terminal -->
+    <path d="M 32 36 L 54 55 L 32 74" stroke="#121212" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <line x1="62" y1="74" x2="80" y2="74" stroke="#121212" stroke-width="9" stroke-linecap="round" />
+  </g>
+
+  <!-- Texto Edy Store -->
+  <text x="200" y="122" font-family="system-ui, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-1">Edy Store</text>
+</svg>
