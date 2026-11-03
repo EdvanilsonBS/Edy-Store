@@ -1,0 +1,201 @@
+/*
+   Estilo do cabeçalho.
+   - Busca: 60px de altura, fundo cinza claro (.header__search).
+   - "Entrar": 114x40, fundo primary, borda 4px (.header__login) - medidas da documentação.
+   - Menu: link ativo em rosa com linha embaixo (.header__link--active).
+   - As regras @media no final reorganizam o cabeçalho em telas pequenas.
+*/
+
+.header {
+  background: var(--white);
+  box-shadow: 0 1px 0 var(--light-gray-2);
+}
+
+.header__inner {
+  padding-top: 24px;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__logo {
+  flex-shrink: 0;
+  display: block;
+}
+
+.header__search {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.header__search input {
+  width: 100%;
+  height: 60px;
+  padding: 0 60px 0 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--light-gray-3);
+  font-size: 16px;
+  color: var(--dark-gray-2);
+}
+
+.header__search input::placeholder {
+  color: var(--light-gray);
+}
+
+.header__search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: var(--light-gray);
+  cursor: pointer;
+}
+
+.header__search button:hover {
+  color: var(--primary);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.header__signup {
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  text-decoration: underline;
+}
+
+.header__login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 40px;
+  border-radius: 4px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header__login:hover {
+  background: var(--tertiary);
+}
+
+.header__greeting {
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  white-space: nowrap;
+}
+
+.header__logout {
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: none;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header__logout:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.header__cart {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Bolinha vermelha com a quantidade de itens na sacola */
+.header__cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--error);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+.header__link {
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header__link:hover {
+  color: var(--primary);
+}
+
+.header__link--active {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom-color: var(--primary);
+}
+
+@media (max-width: 1000px) {
+  .header__top {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .header__search {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .header__actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .header__logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  .header__actions {
+    gap: 16px;
+  }
+
+  .header__signup,
+  .header__greeting {
+    display: none;
+  }
+}

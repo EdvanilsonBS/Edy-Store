@@ -1,0 +1,36 @@
+/*
+   Estilo do <FilterGroup />. Os campos (checkbox/radio) têm 22x22 e cor primary (accent-color).
+*/
+
+.filter-group {
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
+}
+
+.filter-group__title {
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.filter-group__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+  cursor: pointer;
+}
+
+.filter-group__option input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}

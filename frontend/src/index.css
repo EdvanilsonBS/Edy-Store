@@ -1,0 +1,83 @@
+/*
+   ESTILOS GLOBAIS
+   Aqui ficam as CORES do projeto (variáveis) e o estilo base da página.
+   Para mudar uma cor em TODO o site, altere o valor aqui - ela é usada em todos os
+   arquivos .css como var(--primary), var(--dark-gray-2) etc.
+*/
+
+:root {
+  /* Cores principais (definidas na documentação do projeto) */
+  --primary: #c92071;
+  --secondary: #b5b6f2;
+  --tertiary: #991956;
+  --error: #ee4266;
+  --success: #52ca76;
+  --warning: #f6aa1c;
+
+  /* Tons de cinza (do mais escuro para o mais claro) */
+  --dark-gray: #1f1f1f;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8f8f8f;
+  --light-gray-2: #cccccc;
+  --light-gray-3: #f5f5f5;
+  --white: #ffffff;
+
+  /* Largura máxima do conteúdo (1200px úteis + 24px de margem de cada lado) */
+  --container: 1248px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fonte e cor de fundo do site. A fonte Inter é carregada no index.html. */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--dark-gray-2);
+  background: var(--light-gray-3);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* Caixa centralizada que limita a largura do conteúdo. Use class="container" nas páginas. */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Contorno rosa que aparece quando se navega pelo teclado (Tab) - bom para acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Faz o rodapé ficar sempre no fim da tela, mesmo em páginas curtas */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__main {
+  flex: 1;
+}

@@ -1,0 +1,32 @@
+/*
+   Estilo da Home.
+   - .home__collections: as 3 imagens de coleções lado a lado (viram 1 coluna no celular).
+   - .home__content: espaço entre o carrossel e as seções.
+*/
+
+.home__gallery {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.home__content {
+  padding-top: 56px;
+}
+
+.home__collections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home__collections img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+  .home__collections {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,68 @@
+/*
+   Estilo do rodapé: fundo dark-gray, texto branco.
+   .footer__content é a grade das 4 colunas (logo + 3 colunas de links). Em telas pequenas vira 2 e depois 1 coluna.
+*/
+
+.footer {
+  margin-top: 64px;
+  padding: 56px 0 24px;
+  background: var(--dark-gray);
+  color: var(--white);
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 48px;
+}
+
+.footer__brand p {
+  margin: 20px 0;
+  max-width: 340px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__socials a {
+  display: inline-flex;
+}
+
+.footer hr {
+  margin: 40px 0 20px;
+  border: none;
+  border-top: 1px solid var(--dark-gray-3);
+}
+
+.footer__copy {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__brand img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,245 @@
+/*
+   Estilo da página da sacola de compras.
+   - .cart-item: uma linha de produto (imagem, nome/tamanho/cor, quantidade, subtotal).
+   - .cart__question: caixa com a pergunta "Deseja continuar comprando?" e os dois botões.
+   Em telas pequenas, cada item passa a ocupar duas linhas (veja o @media no final).
+*/
+
+.cart {
+  max-width: 900px;
+  padding-top: 48px;
+}
+
+.cart__title,
+.cart--empty h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: var(--dark-gray-2);
+}
+
+.cart__count {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--dark-gray-3);
+}
+
+.cart__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto 110px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-gray-3);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 96px;
+  height: 105px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.cart-item__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.cart-item__info a {
+  font-weight: 700;
+  color: var(--dark-gray-2);
+  text-decoration: none;
+}
+
+.cart-item__info a:hover {
+  color: var(--primary);
+}
+
+.cart-item__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--dark-gray-3);
+}
+
+/* Bolinha com a cor escolhida */
+.cart-item__color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 50%;
+}
+
+.cart-item__remove {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Controle de quantidade: [-] 1 [+] */
+.cart-item__quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px;
+}
+
+.cart-item__quantity button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--dark-gray-2);
+  cursor: pointer;
+}
+
+.cart-item__quantity button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cart-item__quantity span {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-item__subtotal {
+  text-align: right;
+  font-size: 18px;
+  color: var(--dark-gray);
+}
+
+.cart__total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 24px 0 32px;
+  padding: 0 4px;
+  font-size: 16px;
+}
+
+.cart__total strong {
+  font-size: 28px;
+  color: var(--dark-gray);
+}
+
+/* Caixa da pergunta "Deseja continuar comprando?" */
+.cart__question {
+  padding: 32px 24px;
+  border-radius: 8px;
+  background: var(--white);
+  text-align: center;
+}
+
+.cart__question h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  color: var(--dark-gray);
+}
+
+.cart__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cart__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 28px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* Botão vazado (continuar comprando) */
+.cart__button--outline {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.cart__button--outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Botão preenchido (finalizar compra) */
+.cart__button--solid {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.cart__button--solid:hover {
+  background: var(--tertiary);
+  border-color: var(--tertiary);
+}
+
+.cart__hint {
+  margin: 16px 0 0;
+  font-size: 13px;
+  color: var(--dark-gray-3);
+}
+
+.cart--empty {
+  padding-top: 96px;
+  text-align: center;
+}
+
+.cart--empty p {
+  color: var(--dark-gray-3);
+}
+
+@media (max-width: 700px) {
+  .cart-item {
+    grid-template-columns: 80px 1fr;
+    gap: 12px 16px;
+    padding: 16px;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 88px;
+  }
+
+  .cart-item__quantity {
+    grid-column: 1 / 2;
+    justify-self: start;
+  }
+
+  .cart-item__subtotal {
+    grid-column: 2 / 3;
+  }
+
+  .cart__button {
+    width: 100%;
+  }
+}
