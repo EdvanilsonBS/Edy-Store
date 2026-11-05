@@ -67,7 +67,7 @@ const LoginPage = () => {
               label="E-mail"
               type="email"
               autoComplete="email"
-              placeholder="voce@email.com"
+              placeholder="seuemail@email.com"
               value={form.email}
               onChange={update('email')}
               error={errors.email}
