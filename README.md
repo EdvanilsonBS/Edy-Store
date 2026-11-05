@@ -15,16 +15,15 @@ Loja virtual de tênis, projeto final da Digital College. O repositório tem dua
 
 ## Sumário
 
-1. [Visão geral] 
-2. [Como rodar o projeto]
-3. [Front-end]
-4. [Back-end]
-5. [Testes]
-6. [Publicação (deploy)]
-7. [Requisitos atendidos]
-8. [Limitações e próximos passos]
-9. [Onde editar o quê]
-
+1. [Visão geral](#visão-geral)
+2. [Como rodar o projeto](#como-rodar-o-projeto)
+3. [Front-end](#front-end)
+4. [Back-end](#back-end)
+5. [Testes](#testes)
+6. [Publicação (deploy)](#publicação-deploy)
+7. [Requisitos atendidos](#requisitos-atendidos)
+8. [Limitações e próximos passos](#limitações-e-próximos-passos)
+9. [Onde editar o quê](#onde-editar-o-quê)
 ---
 
 ## Visão geral
